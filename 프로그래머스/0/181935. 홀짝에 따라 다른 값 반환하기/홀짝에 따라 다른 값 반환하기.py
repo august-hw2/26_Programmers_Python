@@ -1,6 +1,4 @@
 def solution(n):
-    
     if n%2:
-        return pow((n+1)//2,2)
-    else:
-        return (n*(n+1)*(n+2))//6
+        return sum(range(1,n+1,2))
+    return sum([i*i for i in range(2,n+1,2)])
