@@ -1,13 +1,7 @@
+from collections import Counter
+
 def solution(n, control):
 
-    for i in control:
-        if i == "w":
-            n += 1
-        elif i == "s":
-            n -= 1
-        elif i == "d":
-            n += 10
-        else:
-            n -= 10
+    counter = Counter(control)
 
-    return n
+    return n + counter['w']*1 + counter['s']*(-1) + counter['d']*10 + counter['a']*(-10)
